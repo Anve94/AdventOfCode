@@ -18,9 +18,9 @@ import re
 checksum = 0
 
 with open('2.in', 'r') as infile:
-	for line in infile:
-		values = re.split(r'\t+', line)
-		values = [int(v) for v in values]
-		checksum += max(values) - min(values)
+    for line in infile:
+        values = re.split(r'\t+', line)
+        values = [int(v) for v in values]
+        checksum += max(values) - min(values)
 
 print(checksum)
