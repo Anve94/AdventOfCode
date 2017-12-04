@@ -12,21 +12,19 @@ For example:
 91212129 produces 9 because the only digit that matches the next one is the last digit, 9.
 """
 def solve(s):
+    total = 0
+    # Adds the first character to the end to complete the "round-trip"
+    s = s + s[0]
 
-	total = 0
-	# Adds the first character to the end to complete the "round-trip"
-	s = s + s[0]
+    for i, c in enumerate(s):
+        # Return if the next character would be out of bounds
+        if i + 1 >= len(s):
+            return total
 
-	for i, c in enumerate(s):
-		# Return if the next character would be out of bounds
-		if i + 1 >= len(s):
-			return total
-
-
-		if c == s[i+1]:
-			total += int(c)
+        if c == s[i+1]:
+            total += int(c)
 
 if __name__ == "__main__":
-	with open("1.in", 'r') as f:
-		inp = f.readline()
-	print(solve(inp))
+    with open("1.in", 'r') as f:
+        inp = f.readline()
+    print(solve(inp))
