@@ -1,5 +1,5 @@
 """
-Day 2 uses the same spiral. But now, the next value in the spiral
+Part 2 uses the same spiral. But now, the next value in the spiral
 is the sum of all values surrounding the previous value, including
 diagonals. I.e.
 
